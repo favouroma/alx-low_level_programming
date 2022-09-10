@@ -7,10 +7,12 @@
  */
 int main(void)
 {
-	char favvy;
+	int favvy;
+	char john;
 
-	for (favvy = 'z'; favvy >= 'a'; favvy--)
+	for (favvy = 48; favvy < 58; favvy++)
 		putchar(favvy);
+	for (john = 'a'; john <= 'f'; john++)
 	putchar('\n');
 	return (0);
 }
