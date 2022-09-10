@@ -8,10 +8,16 @@
 int main(void)
 {
 	int favvy;
-	char john;
 
 	for (favvy = 48; favvy < 58; favvy++)
-		putchar(john);
+	{
+		putchar(favvy);
+		if (favvy != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
 	putchar('\n');
 	return (0);
 }
