@@ -13,6 +13,7 @@ int main(void)
 	for (favvy = 48; favvy < 58; favvy++)
 		putchar(favvy);
 	for (john = 'a'; john <= 'f'; john++)
+		putchar(john);
 	putchar('\n');
 	return (0);
 }
