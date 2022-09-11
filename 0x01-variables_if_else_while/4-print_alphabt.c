@@ -9,7 +9,7 @@ int main(void)
 {
 	char favvy;
 
-	for (favvy = 'a'; favvy <= 'z'; sammy++)
+	for (favvy = 'a'; favvy <= 'z'; favvy++)
 	{
 		if (favvy != 'q' && favvy != 'e')
 			putchar(favvy);
