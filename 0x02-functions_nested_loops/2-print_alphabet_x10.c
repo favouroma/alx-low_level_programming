@@ -7,11 +7,11 @@
  */
 void print_alphabet_x10(void)
 {
-	int favour, a;
+	int favour, b;
 
 	for (favour = 0; favour <= 9; favour++)
 	{
-		for (a = 97; a = 122; a++)
+		for (b = 97; b <= 122; b++)
 		{
 			_putchar(b);
 		}
