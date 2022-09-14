@@ -1,48 +1,37 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 98 Fibonacci numbers
- *
- * Return: Always 0.
+ * main - finds and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int c, boolean, boolean2;
-	int n1, n2, fn, fn2, n11, n22;
+	unsigned long int i, j, k, j1, j2, k1, k2;
 
-	n1 = 1;
-	n2 = 2;
-	boolean =  boolean2 = 1;
-	printf("%1d, %1d", n1, n2);
-	for (c = 0; c < 96; c++)
+	j = 1;
+	k = 2;
+	printf("%1u", j);
+	for (i = 1; i < 91; i++)
 	{
-		if (boolean)
-		{
-			fn = n1 + n2;
-			printf(", %1d", fn);
-			n1 = n2;
-			n2 = fn;
-		}
-		else
-		{
-			if (boolean2)
-			{
-				n11 = n1 % 1000000000;
-				n22 = n2 % 1000000000;
-				n1 = n1 / 1000000000;
-				boolean2 = 0;
-			}
-			fn2 = (n11 + n22);
-			fn = n1 + n2 + (fn2 / 1000000000);
-			printf(", %1d", fn);
-			printf("%1d", fn2 % 1000000000);
-			n1 = n2;
-			n11 = n22;
-			n2 = fn;
-			n22 = (fn % 1000000000);
-		}
-		if (((n1 + n2) < 0) && boolean == 1)
-			boolean = 0;
+		printf(",%1u", k);
+		k = k + j;
+		j = k - j;
+	}
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %1u", k1 + (k2 / 1000000000));
+		printf("%1u", k2 % 1000000000);
+		k1 = k1 + j1;
+		j1 = k1 - j1;
+		k2 = k2 + j2;
+		j2 = k2 - j2;
 	}
 	printf("\n");
 	return (0);
