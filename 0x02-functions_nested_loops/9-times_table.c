@@ -9,7 +9,7 @@ void times_table(void)
 {
 	int jasper, alx, op;
 
-	for (jasper = 0; jasper <= 9; alx++)
+	for (jasper = 0; jasper <= 9; jasper++)
 	{
 		_putchar(48);
 		for (alx = 1; alx <= 9; alx++)
