@@ -6,21 +6,17 @@
  *
  * @n: input number as an integer.
  *
- * Return: last digit.
+ * Return: Always 0 if true
  */
 int print_last_digit(int n)
 {
-	int a;
+	int x;
 
-	a = n % 10;
-	if (a < 0)
-	{
-		_putchar(a + 48);
-		return (-1);
-	}
-	else
-	{
-		_putchar(a + 48);
-		return (1);
-	}
+	if (n < 0)
+		n = -n;
+	x = n % 10;
+	if (x < 0)
+		x = -x;
+	_putchar(x + '0');
+	return (x);
 }
