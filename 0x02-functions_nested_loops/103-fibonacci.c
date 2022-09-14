@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints thae add of the even-valued
+ * main - Prints the add of the even-valued
  * fibonacci numbers.
  *
  * Return: Always 0.
@@ -23,6 +23,6 @@ int main(void)
 			afn += n1;
 		}
 	}
-	printf("%1d\n", afdn);
+	printf("%1d\n", afn);
 	return (0);
 }
