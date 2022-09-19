@@ -5,6 +5,7 @@
  * @s: the used string reference pointer
  * Return: 0
  */
+
 void print_rev(char *s)
 {
 	int i = 0;
