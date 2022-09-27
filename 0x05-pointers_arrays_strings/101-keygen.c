@@ -3,23 +3,22 @@
 #include <time.h>
 
 /**
- * main - generateskeygen.
- * Return: 0 Always.
+ * main - generates random valid passwords
+ * Return: 0 (on success).
  */
 int main(void)
 {
-	int r = 0, c = 0;
-	time_t t;
+	int pass, sum;
 
-	srand((unsigned int) time(&t));
-	while (c < 2772)
+	srand(time(NULL));
+	sum = 0;
+	while (sum <= 2645)
 	{
-		r = rand() % 128;
-		if ((c + r) > 2772)
-			break;
-		c = c + r;
-		printf("%c", r);
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
 	}
-	printf("%c\n", (2772 - c));
+	printf("%c", 2772 - sum);
+
 	return (0);
 }
