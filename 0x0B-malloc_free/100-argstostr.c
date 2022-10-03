@@ -1,4 +1,4 @@
-iinclude "main.h"
+#include "main.h"
 /**
  * argstostr - prints args
  * @ac: takes in width of grid
@@ -25,19 +25,19 @@ char *argstostr(int ac, char **av)
 	}
 	count = count + ac + 1;
 	str = malloc(sizeof(char) * count);
-if (str == NULL)
-{
-return (NULL);
-}
-for (a = 0; a < ac; a++)
-{
-	for (b = 0; av[a][b] != '\0'; b++)
+	if (str == NULL)
 	{
-		str[c] = av[a][b];
+		return (NULL);
+	}
+	for (a = 0; a < ac; a++)
+	{
+		for (b = 0; av[a][b] != '\0'; b++)
+		{
+			str[c] = av[a][b];
+			c++;
+		}
+		str[c] = '\n';
 		c++;
 	}
-	str[c] = '\n';
-	c++;
-}
-return (str);
+	return (str);
 }
